@@ -18,14 +18,15 @@ Projeto desenvolvido em C com o objetivo de implementar funções trigonométric
 * `m_sec(double rad)` - Secante.
 * `m_csc(double rad)` - Cossecante.
 * `m_cot(double rad)` - Cotangente.
-  
-## Métodos Planejados
 
-### Funções Trigonométricas Inversas
+* ### Funções Trigonométricas Inversas
 
 * `m_asin(double x)` - Arco seno.
 * `m_acos(double x)` - Arco cosseno.
 * `m_atan(double x)` - Arco tangente.
+
+  
+## Métodos Planejados
 
 ### Funções Hiperbólicas
 
