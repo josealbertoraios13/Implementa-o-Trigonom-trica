@@ -1,3 +1,0 @@
-/media/jose-alberto/SS2.1/GitHub/C/myMath/build/CMakeFiles/my_math.dir
-/media/jose-alberto/SS2.1/GitHub/C/myMath/build/CMakeFiles/edit_cache.dir
-/media/jose-alberto/SS2.1/GitHub/C/myMath/build/CMakeFiles/rebuild_cache.dir
