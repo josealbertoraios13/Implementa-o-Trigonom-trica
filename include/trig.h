@@ -8,15 +8,25 @@
 
 #define M_NAN (__builtin_nanf ("") )
 
-double rad_to_deg(double n);
-double deg_to_rad(double n);
+double m_rad_to_deg(double x);
+double m_deg_to_rad(double x);
 
-double m_sin (double rad);
-double m_cos (double rad);
-double m_tan (double rad);
+double m_abs(double x);
 
-double m_sec (double rad);
-double m_csc (double rad);
-double m_cot (double rad);
+double m_sqrt(double x);
+
+double m_mod(double a, double b);
+
+double m_sin(double rad);
+double m_cos(double rad);
+double m_tan(double rad);
+
+double m_sec(double rad);
+double m_csc(double rad);
+double m_cot(double rad);
+
+double m_arcsin(double rad);
+double m_arccos(double rad);
+double m_arctan(double rad);
 
 #endif

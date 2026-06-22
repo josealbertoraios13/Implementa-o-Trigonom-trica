@@ -8,6 +8,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(my_math 
     src/main.c 
     src/trig/trig.c
+    src/tests/tests.c
     )
 
 target_link_libraries(my_math m)

@@ -1,15 +1,43 @@
 #include <stdio.h>
 #include "trig.h"
 
-double rad_to_deg(double n){
-    return n * (MID_ANGLE / PI);
+double m_rad_to_deg(double x){
+    return x * (MID_ANGLE / PI);
 }
 
-double deg_to_rad(double n){
-    return n * (PI / MID_ANGLE);
+double m_deg_to_rad(double x){
+    return x * (PI / MID_ANGLE);
 }
 
-static double module(double a, double b){
+double m_abs(double x){
+    return x < 0 ? -x : x;
+}
+
+double m_sqrt(double x){
+
+    if (x < 0)
+    {
+        return M_NAN;
+    }
+    
+    if (x == 0)
+    {
+        return 0;
+    }
+
+    double current_x = x / 2;
+    double last_x = 0;
+
+    while (m_abs(current_x - last_x) > PRECISION)
+    {
+        last_x = current_x;
+        current_x = (last_x + x / last_x) / 2;
+    }
+    
+    return current_x;
+}
+
+double m_mod(double a, double b){
     long long q = (long long)(a / b);
 
     double r = a - ((double)q * b);
@@ -21,12 +49,8 @@ static double module(double a, double b){
     return r;
 }
 
-static double m_abs(double x){
-    return x < 0 ? -x : x;
-}
-
 double m_sin(double rad){
-    double x = module(rad, 2 * PI);
+    double x = m_mod(rad, 2 * PI);
 
     if(x > PI){
         x -= 2 * PI;
@@ -48,7 +72,7 @@ double m_sin(double rad){
 }
 
 double m_cos(double rad){
-    double x = module(rad, 2 * PI);
+    double x = m_mod(rad, 2 * PI);
 
     if(x > PI){
         x -= 2 * PI;
@@ -108,4 +132,63 @@ double m_cot(double rad){
     }
 
     return 1 / tan_value;
+}
+
+double m_arctan(double rad){
+    double x = rad;
+
+    if (x > 1){
+        return (PI / 2) - m_arctan(1 / x);
+    }
+
+    if (x < -1){
+        return (-PI / 2) - m_arctan(1 / x);
+    }
+
+    if (m_abs(x) > 0.5) {
+        return 2 * m_arctan(x / (1 + m_sqrt(1 + (x * x))));
+    }
+
+    double term = x;
+    double arcatan_value = term;
+
+    for (int n = 1; n < ITERATIONS; n++){
+        term *= -x * x;
+        double add = term / ((2 * n) + 1);
+        arcatan_value += add;
+
+        if(m_abs(add) < PRECISION){
+            break;
+        }
+    }
+    
+    return arcatan_value;
+}
+
+double m_arcsin(double rad){
+    double x = rad;
+
+    if(x < -1.0 || x > 1.0){
+        return M_NAN;
+    }
+
+    if(x == 1.0){
+        return PI / 2;
+    }
+
+    if(x == -1){
+        return -PI / 2;
+    }
+
+    return m_arctan(x / m_sqrt(1.0 - (x * x)));
+}
+
+double m_arccos(double rad){
+    double x = rad;
+
+    if (x < -1.0 || x > 1.0){
+        return M_NAN;
+    }
+
+    return (PI / 2) - m_arcsin(x);
 }
