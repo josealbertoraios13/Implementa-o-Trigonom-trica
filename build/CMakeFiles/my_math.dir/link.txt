@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/my_math.dir/link.d CMakeFiles/my_math.dir/src/main.c.o CMakeFiles/my_math.dir/src/trig/trig.c.o -o my_math  -lm
