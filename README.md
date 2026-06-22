@@ -15,13 +15,11 @@ Projeto desenvolvido em C com o objetivo de implementar funções trigonométric
 * `m_cos(double rad)` - Calcula o cosseno de um ângulo em radianos.
 * `m_tan(double rad)` - Calcula a tangente de um ângulo em radianos.
 
-## Métodos Planejados
-
-### Funções Trigonométricas Básicas
-
 * `m_sec(double rad)` - Secante.
 * `m_csc(double rad)` - Cossecante.
 * `m_cot(double rad)` - Cotangente.
+  
+## Métodos Planejados
 
 ### Funções Trigonométricas Inversas
 
