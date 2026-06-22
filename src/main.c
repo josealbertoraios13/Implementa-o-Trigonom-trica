@@ -2,31 +2,26 @@
 #include "trig.h"
 
 int main(void){
-    printf("=== SENO ===\n");
-    printf("sin(0)      = %.10f\n", m_sin(0));
-    printf("sin(PI/6)   = %.10f\n", m_sin(PI / 6));
-    printf("sin(PI/4)   = %.10f\n", m_sin(PI / 4));
-    printf("sin(PI/2)   = %.10f\n", m_sin(PI / 2));
-    printf("sin(PI)     = %.10f\n", m_sin(PI));
+    printf("\n=== SECANTE ===\n");
+    printf("sec(0)      = %.10f\n", m_sec(0));
+    printf("sec(PI/6)   = %.10f\n", m_sec(PI / 6));
+    printf("sec(PI/4)   = %.10f\n", m_sec(PI / 4));
+    printf("sec(PI/3)   = %.10f\n", m_sec(PI / 3));
 
-    printf("\n=== COSSENO ===\n");
-    printf("cos(0)      = %.10f\n", m_cos(0));
-    printf("cos(PI/6)   = %.10f\n", m_cos(PI / 6));
-    printf("cos(PI/4)   = %.10f\n", m_cos(PI / 4));
-    printf("cos(PI/2)   = %.10f\n", m_cos(PI / 2));
-    printf("cos(PI)     = %.10f\n", m_cos(PI));
+    printf("\n=== COSSECANTE ===\n");
+    printf("csc(PI/6)   = %.10f\n", m_csc(PI / 6));
+    printf("csc(PI/4)   = %.10f\n", m_csc(PI / 4));
+    printf("csc(PI/3)   = %.10f\n", m_csc(PI / 3));
+    printf("csc(PI/2)   = %.10f\n", m_csc(PI / 2));
 
-    printf("\n=== TANGENTE ===\n");
-    printf("tan(0)      = %.10f\n", m_tan(0));
-    printf("tan(PI/6)   = %.10f\n", m_tan(PI / 6));
-    printf("tan(PI/4)   = %.10f\n", m_tan(PI / 4));
-    printf("tan(PI/3)   = %.10f\n", m_tan(PI / 3));
+    printf("\n=== COTANGENTE ===\n");
+    printf("cot(PI/6)   = %.10f\n", m_cot(PI / 6));
+    printf("cot(PI/4)   = %.10f\n", m_cot(PI / 4));
+    printf("cot(PI/3)   = %.10f\n", m_cot(PI / 3));
 
-    printf("\n=== CONVERSAO ===\n");
-    printf("180 graus -> %.10f rad\n", deg_to_rad(180));
-    printf("90 graus  -> %.10f rad\n", deg_to_rad(90));
-    printf("PI rad    -> %.10f graus\n", rad_to_deg(PI));
-    printf("PI/2 rad  -> %.10f graus\n", rad_to_deg(PI / 2));
-
+    printf("\n=== NAN ===\n");
+    printf("sec(PI/2) = %f\n", m_sec(PI / 2)); // NAN
+    printf("csc(0)    = %f\n", m_csc(0));      // NAN
+    printf("cot(0)    = %f\n", m_cot(0));      // NAN
     return 0;
 }
