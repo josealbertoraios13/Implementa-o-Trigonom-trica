@@ -1,1 +1,1 @@
-# Implementa-o-Trigonom-trica
+# Implementação Trigonométrica
