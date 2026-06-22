@@ -76,7 +76,7 @@ void module_test(){
     printf("mod(2*PI, PI)   = %.10f\n", m_mod(2 * PI, PI));
 }
 
-void trigonometric_fucntions_test1(){
+void trigonometric_functions_test1(){
     printf("\n=== FUNDAMENTAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SENO]\n");
@@ -100,7 +100,7 @@ void trigonometric_fucntions_test1(){
     printf("tan(PI/3)   = %.10f\n", m_tan(PI / 3));
 }
 
-void trignometric_functions_test2(){
+void trigonometric_functions_test2(){
     printf("\n=== RECIPROCAL TRIGONOMETRICAS FUNCTIONS ===\n");
 
     printf("\n[SECANTE]\n");
@@ -122,7 +122,7 @@ void trignometric_functions_test2(){
 }
 
 void trigonometric_functions_test3(){
-        printf("\n=== INVERSE TRIGONOMETRICAS FUNCTIONS ===\n");
+    printf("\n=== INVERSE TRIGONOMETRICAS FUNCTIONS ===\n");
 
     printf("\n[ARCOSIN]\n");
     printf("arcosin(0)      = %.10f\n", m_arcsin(0));
@@ -131,13 +131,13 @@ void trigonometric_functions_test3(){
     printf("arcosin(PI/3)   = %.10f\n", m_arcsin(PI / 3));
 
     printf("\n[ARCCOS]\n");
-    printf("csc(PI/6)   = %.10f\n", m_arccos(PI / 6));
-    printf("csc(PI/4)   = %.10f\n", m_arccos(PI / 4));
-    printf("csc(PI/3)   = %.10f\n", m_arccos(PI / 3));
-    printf("csc(PI/2)   = %.10f\n", m_arccos(PI / 2));
+    printf("arccos(PI/6)   = %.10f\n", m_arccos(PI / 6));
+    printf("arccos(PI/4)   = %.10f\n", m_arccos(PI / 4));
+    printf("arccos(PI/3)   = %.10f\n", m_arccos(PI / 3));
+    printf("arccos(PI/2)   = %.10f\n", m_arccos(PI / 2));
 
     printf("\n[ARCOTAN]\n");
-    printf("cot(PI/6)   = %.10f\n", m_arctan(PI / 6));
-    printf("cot(PI/4)   = %.10f\n", m_arctan(PI / 4));
-    printf("cot(PI/3)   = %.10f\n", m_arctan(PI / 3));
+    printf("arctan(PI/6)   = %.10f\n", m_arctan(PI / 6));
+    printf("arctan(PI/4)   = %.10f\n", m_arctan(PI / 4));
+    printf("arctan(PI/3)   = %.10f\n", m_arctan(PI / 3));
 }
