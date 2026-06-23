@@ -192,3 +192,37 @@ double m_arccos(double rad){
 
     return (PI / 2) - m_arcsin(x);
 }
+
+double m_arcsec(double rad){
+    double x = rad;
+
+    if(m_abs(x) < 1){
+        return M_NAN;
+    }
+
+    return m_arccos(1.0 / x);
+}
+
+double m_arccsc(double rad){
+    double x = rad;
+
+    if(m_abs(x) < 1){
+        return M_NAN;
+    }
+
+    return m_arcsin(1.0 / x);
+}
+
+double m_arccot(double rad){
+    double x = rad;
+
+    if(x > 0){
+        return m_arctan(1.0 / x);
+    }
+
+    if(x < 0){
+        return m_arctan(1.0 / x) + PI;
+    }
+    
+    return PI / 2;
+}

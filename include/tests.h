@@ -9,5 +9,6 @@ void module_test();
 void trigonometric_functions_test1();
 void trigonometric_functions_test2();
 void trigonometric_functions_test3();
+void trigonometric_functions_test4();
 
 #endif

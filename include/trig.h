@@ -50,4 +50,8 @@ double m_arcsin(double rad);
 double m_arccos(double rad);
 double m_arctan(double rad);
 
+double m_arcsec(double rad);
+double m_arccsc(double rad);
+double m_arccot(double rad);
+
 #endif

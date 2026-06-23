@@ -141,3 +141,22 @@ void trigonometric_functions_test3(){
     printf("arctan(PI/4)   = %.10f\n", m_arctan(RAD_45));
     printf("arctan(PI/3)   = %.10f\n", m_arctan(RAD_60));
 }
+
+void trigonometric_functions_test4(){
+    printf("\n=== INVERSE RECIPROCAL TRIGONOMETRIC FUNCTIONS ===\n");
+    
+    printf("\n[ARCCOT]\n");
+    printf("arccot(1)     = %.10f\n", m_arccot(1));
+    printf("arccot(0)     = %.10f\n", m_arccot(0));
+    printf("arccot(-1)    = %.10f\n", m_arccot(-1));
+
+    printf("\n[ARCSEC]\n");
+    printf("arcsec(1)     = %.10f\n", m_arcsec(1));
+    printf("arcsec(2)     = %.10f\n", m_arcsec(2));
+    printf("arcsec(-2)    = %.10f\n", m_arcsec(-2));
+
+    printf("\n[ARCCSC]\n");
+    printf("arccsc(1)     = %.10f\n", m_arccsc(1));
+    printf("arccsc(2)     = %.10f\n", m_arccsc(2));
+    printf("arccsc(-2)    = %.10f\n", m_arccsc(-2));
+}
