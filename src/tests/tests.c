@@ -5,22 +5,22 @@
 void rad_and_deg_convertion_test(){
 
     printf("\n=== DEGREES TO RADIANS ===\n");
-    printf("0°   = %.10f rad\n", m_deg_to_rad(0));
-    printf("30°  = %.10f rad\n", m_deg_to_rad(30));
-    printf("45°  = %.10f rad\n", m_deg_to_rad(45));
-    printf("60°  = %.10f rad\n", m_deg_to_rad(60));
-    printf("90°  = %.10f rad\n", m_deg_to_rad(90));
-    printf("180° = %.10f rad\n", m_deg_to_rad(180));
-    printf("360° = %.10f rad\n", m_deg_to_rad(360));
+    printf("0°   = %.10f rad\n", m_deg_to_rad(DEG_0));
+    printf("30°  = %.10f rad\n", m_deg_to_rad(DEG_30));
+    printf("45°  = %.10f rad\n", m_deg_to_rad(DEG_45));
+    printf("60°  = %.10f rad\n", m_deg_to_rad(DEG_60));
+    printf("90°  = %.10f rad\n", m_deg_to_rad(DEG_90));
+    printf("180° = %.10f rad\n", m_deg_to_rad(DEG_180));
+    printf("360° = %.10f rad\n", m_deg_to_rad(DEG_360));
 
     printf("\n=== RADIANS -> DEGREES ===\n");
-    printf("0      = %.10f°\n", m_rad_to_deg(0));
-    printf("PI/6   = %.10f°\n", m_rad_to_deg(PI / 6));
-    printf("PI/4   = %.10f°\n", m_rad_to_deg(PI / 4));
-    printf("PI/3   = %.10f°\n", m_rad_to_deg(PI / 3));
-    printf("PI/2   = %.10f°\n", m_rad_to_deg(PI / 2));
+    printf("0      = %.10f°\n", m_rad_to_deg(RAD_0));
+    printf("PI/6   = %.10f°\n", m_rad_to_deg(RAD_30));
+    printf("PI/4   = %.10f°\n", m_rad_to_deg(RAD_45));
+    printf("PI/3   = %.10f°\n", m_rad_to_deg(RAD_60));
+    printf("PI/2   = %.10f°\n", m_rad_to_deg(RAD_90));
     printf("PI     = %.10f°\n", m_rad_to_deg(PI));
-    printf("2*PI   = %.10f°\n", m_rad_to_deg(2 * PI));
+    printf("2*PI   = %.10f°\n", m_rad_to_deg(RAD_360));
 }
 
 void absolute_value_test(){
@@ -80,64 +80,64 @@ void trigonometric_functions_test1(){
     printf("\n=== FUNDAMENTAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SENO]\n");
-    printf("sin(0)      = %.10f\n", m_sin(0));
-    printf("sin(PI/6)   = %.10f\n", m_sin(PI / 6));
-    printf("sin(PI/4)   = %.10f\n", m_sin(PI / 4));
-    printf("sin(PI/2)   = %.10f\n", m_sin(PI / 2));
-    printf("sin(PI)     = %.10f\n", m_sin(PI));
+    printf("sin(0)      = %.10f\n", m_sin(RAD_0));
+    printf("sin(PI/6)   = %.10f\n", m_sin(RAD_30));
+    printf("sin(PI/4)   = %.10f\n", m_sin(RAD_45));
+    printf("sin(PI/2)   = %.10f\n", m_sin(RAD_90));
+    printf("sin(PI)     = %.10f\n", m_sin(RAD_180));
 
     printf("\n[COSSENO]\n");
-    printf("cos(0)      = %.10f\n", m_cos(0));
-    printf("cos(PI/6)   = %.10f\n", m_cos(PI / 6));
-    printf("cos(PI/4)   = %.10f\n", m_cos(PI / 4));
-    printf("cos(PI/2)   = %.10f\n", m_cos(PI / 2));
-    printf("cos(PI)     = %.10f\n", m_cos(PI));
+    printf("cos(0)      = %.10f\n", m_cos(RAD_0));
+    printf("cos(PI/6)   = %.10f\n", m_cos(RAD_30));
+    printf("cos(PI/4)   = %.10f\n", m_cos(RAD_45));
+    printf("cos(PI/2)   = %.10f\n", m_cos(RAD_90));
+    printf("cos(PI)     = %.10f\n", m_cos(RAD_180));
 
     printf("\n[TANGENTE]\n");
-    printf("tan(0)      = %.10f\n", m_tan(0));
-    printf("tan(PI/6)   = %.10f\n", m_tan(PI / 6));
-    printf("tan(PI/4)   = %.10f\n", m_tan(PI / 4));
-    printf("tan(PI/3)   = %.10f\n", m_tan(PI / 3));
+    printf("tan(0)      = %.10f\n", m_tan(RAD_0));
+    printf("tan(PI/6)   = %.10f\n", m_tan(RAD_30));
+    printf("tan(PI/4)   = %.10f\n", m_tan(RAD_45));
+    printf("tan(PI/3)   = %.10f\n", m_tan(RAD_60));
 }
 
 void trigonometric_functions_test2(){
-    printf("\n=== RECIPROCAL TRIGONOMETRICAS FUNCTIONS ===\n");
+    printf("\n=== RECIPROCAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SECANTE]\n");
-    printf("sec(0)      = %.10f\n", m_sec(0));
-    printf("sec(PI/6)   = %.10f\n", m_sec(PI / 6));
-    printf("sec(PI/4)   = %.10f\n", m_sec(PI / 4));
-    printf("sec(PI/3)   = %.10f\n", m_sec(PI / 3));
+    printf("sec(0)      = %.10f\n", m_sec(RAD_0));
+    printf("sec(PI/6)   = %.10f\n", m_sec(RAD_30));
+    printf("sec(PI/4)   = %.10f\n", m_sec(RAD_45));
+    printf("sec(PI/3)   = %.10f\n", m_sec(RAD_60));
 
     printf("\n[COSSECANTE]\n");
-    printf("csc(PI/6)   = %.10f\n", m_csc(PI / 6));
-    printf("csc(PI/4)   = %.10f\n", m_csc(PI / 4));
-    printf("csc(PI/3)   = %.10f\n", m_csc(PI / 3));
-    printf("csc(PI/2)   = %.10f\n", m_csc(PI / 2));
+    printf("csc(PI/6)   = %.10f\n", m_csc(RAD_30));
+    printf("csc(PI/4)   = %.10f\n", m_csc(RAD_45));
+    printf("csc(PI/3)   = %.10f\n", m_csc(RAD_60));
+    printf("csc(PI/2)   = %.10f\n", m_csc(RAD_90));
 
     printf("\n[COTANGENTE]\n");
-    printf("cot(PI/6)   = %.10f\n", m_cot(PI / 6));
-    printf("cot(PI/4)   = %.10f\n", m_cot(PI / 4));
-    printf("cot(PI/3)   = %.10f\n", m_cot(PI / 3));
+    printf("cot(PI/6)   = %.10f\n", m_cot(RAD_30));
+    printf("cot(PI/4)   = %.10f\n", m_cot(RAD_45));
+    printf("cot(PI/3)   = %.10f\n", m_cot(RAD_60));
 }
 
 void trigonometric_functions_test3(){
-    printf("\n=== INVERSE TRIGONOMETRICAS FUNCTIONS ===\n");
+    printf("\n=== INVERSE TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[ARCOSIN]\n");
-    printf("arcosin(0)      = %.10f\n", m_arcsin(0));
-    printf("arcosin(PI/6)   = %.10f\n", m_arcsin(PI / 6));
-    printf("arcosin(PI/4)   = %.10f\n", m_arcsin(PI / 4));
-    printf("arcosin(PI/3)   = %.10f\n", m_arcsin(PI / 3));
+    printf("arcosin(0)      = %.10f\n", m_arcsin(RAD_0));
+    printf("arcosin(PI/6)   = %.10f\n", m_arcsin(RAD_30));
+    printf("arcosin(PI/4)   = %.10f\n", m_arcsin(RAD_45));
+    printf("arcosin(PI/3)   = %.10f\n", m_arcsin(RAD_60));
 
     printf("\n[ARCCOS]\n");
-    printf("arccos(PI/6)   = %.10f\n", m_arccos(PI / 6));
-    printf("arccos(PI/4)   = %.10f\n", m_arccos(PI / 4));
-    printf("arccos(PI/3)   = %.10f\n", m_arccos(PI / 3));
-    printf("arccos(PI/2)   = %.10f\n", m_arccos(PI / 2));
+    printf("arccos(PI/6)   = %.10f\n", m_arccos(RAD_30));
+    printf("arccos(PI/4)   = %.10f\n", m_arccos(RAD_45));
+    printf("arccos(PI/3)   = %.10f\n", m_arccos(RAD_60));
+    printf("arccos(PI/2)   = %.10f\n", m_arccos(RAD_90));
 
     printf("\n[ARCOTAN]\n");
-    printf("arctan(PI/6)   = %.10f\n", m_arctan(PI / 6));
-    printf("arctan(PI/4)   = %.10f\n", m_arctan(PI / 4));
-    printf("arctan(PI/3)   = %.10f\n", m_arctan(PI / 3));
+    printf("arctan(PI/6)   = %.10f\n", m_arctan(RAD_30));
+    printf("arctan(PI/4)   = %.10f\n", m_arctan(RAD_45));
+    printf("arctan(PI/3)   = %.10f\n", m_arctan(RAD_60));
 }

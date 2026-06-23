@@ -2,11 +2,11 @@
 #include "trig.h"
 
 double m_rad_to_deg(double x){
-    return x * (MID_ANGLE / PI);
+    return x * (DEG_180 / PI);
 }
 
 double m_deg_to_rad(double x){
-    return x * (PI / MID_ANGLE);
+    return x * (PI / DEG_180);
 }
 
 double m_abs(double x){
