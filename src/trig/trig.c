@@ -14,7 +14,6 @@ double m_abs(double x){
 }
 
 double m_sqrt(double x){
-
     if (x < 0)
     {
         return M_NAN;
@@ -35,6 +34,51 @@ double m_sqrt(double x){
     }
     
     return current_x;
+}
+
+double m_pow(double x, int n){
+    if(n == 0.0 && x == 0.0){
+        return M_NAN;
+    }
+
+    if(n == 0.0){
+        return 1.0;
+    }
+
+    if(x == 0.0){
+        return 0.0;
+    }
+
+    double result = 1.0;
+
+    for (int i = 0; i < (int)m_abs(n); i++){
+        result *= x;
+    }
+    
+    return (n < 0.0) ? (1.0 / result) : result;
+}
+
+double m_ln(double x){
+
+    if(x <= 0.0){
+        return M_NAN;
+    }
+
+    double t = x - 1;
+   
+    double term = t;
+    double ln_value = term;
+
+    for (int n = 1; n < ITERATIONS; n++){
+        term *= -t * n / (n + 1.0);
+        ln_value += term;
+
+        if(m_abs(term) < PRECISION){
+            break;
+        }
+    }
+
+    return ln_value;
 }
 
 double m_mod(double a, double b){
@@ -134,9 +178,19 @@ double m_cot(double rad){
     return 1 / tan_value;
 }
 
-double m_arctan(double rad){
-    double x = rad;
+double m_sinh(double x){
+    return (m_pow(e, x) - m_pow(e, -x)) / 2;
+}
 
+double m_cosh(double x){
+    return (m_pow(e, x) + m_pow(e, -x)) / 2;
+}
+
+double m_tanh(double x){
+    return m_sinh(x) / m_cosh(x);
+}
+
+double m_arctan(double x){
     if (x > 1){
         return (PI / 2) - m_arctan(1 / x);
     }
@@ -165,9 +219,7 @@ double m_arctan(double rad){
     return arcatan_value;
 }
 
-double m_arcsin(double rad){
-    double x = rad;
-
+double m_arcsin(double x){
     if(x < -1.0 || x > 1.0){
         return M_NAN;
     }
@@ -183,9 +235,7 @@ double m_arcsin(double rad){
     return m_arctan(x / m_sqrt(1.0 - (x * x)));
 }
 
-double m_arccos(double rad){
-    double x = rad;
-
+double m_arccos(double x){
     if (x < -1.0 || x > 1.0){
         return M_NAN;
     }
@@ -193,9 +243,7 @@ double m_arccos(double rad){
     return (PI / 2) - m_arcsin(x);
 }
 
-double m_arcsec(double rad){
-    double x = rad;
-
+double m_arcsec(double x){
     if(m_abs(x) < 1){
         return M_NAN;
     }
@@ -203,9 +251,7 @@ double m_arcsec(double rad){
     return m_arccos(1.0 / x);
 }
 
-double m_arccsc(double rad){
-    double x = rad;
-
+double m_arccsc(double x){
     if(m_abs(x) < 1){
         return M_NAN;
     }
@@ -213,9 +259,7 @@ double m_arccsc(double rad){
     return m_arcsin(1.0 / x);
 }
 
-double m_arccot(double rad){
-    double x = rad;
-
+double m_arccot(double x){
     if(x > 0){
         return m_arctan(1.0 / x);
     }
