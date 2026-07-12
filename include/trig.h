@@ -2,8 +2,10 @@
 #define TRIG_H
 
 #define PI 3.14159265358979323846
-#define e 2.71828182845904523536
+#define M_e 2.71828182845904523536
 
+#define M_LN2 0.6931471805599453
+ 
 #define DEG_0     0.0
 #define DEG_30    30.0
 #define DEG_45    45.0
@@ -40,6 +42,7 @@ double m_sqrt(double x);
 double m_pow(double x, int n);
 
 double m_ln(double x);
+double m_ln_series(double m);
 
 double m_mod(double a, double b);
 

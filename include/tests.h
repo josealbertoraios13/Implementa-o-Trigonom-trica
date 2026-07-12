@@ -4,6 +4,8 @@
 void rad_and_deg_convertion_test();
 void absolute_value_test();
 void sqrt_test();
+void ln_test();
+void pow_test();
 void module_test();
 
 void trigonometric_functions_test1();

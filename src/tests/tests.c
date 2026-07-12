@@ -60,6 +60,39 @@ void sqrt_test(){
     printf("sqrt(81) = %.10f\n", m_sqrt(81));
 }
 
+void ln_test(){
+    printf("\n=== NATURAL LOGARITHM ===\n");
+
+    printf("ln(1)     = %.15f\n", m_ln(1));
+    printf("ln(2)     = %.15f\n", m_ln(2));
+
+    printf("ln(e)     = %.15f\n", m_ln(M_e));
+    printf("ln(0.5)   = %.15f\n", m_ln(0.5));
+
+    printf("ln(10)    = %.15f\n", m_ln(10));
+    printf("ln(100)   = %.15f\n", m_ln(100));
+
+    printf("ln(0.1)   = %.15f\n", m_ln(0.1));
+    printf("ln(1024)  = %.15f\n", m_ln(1024));
+}
+
+void pow_test(){
+    printf("\n=== POWER ===\n");
+
+    printf("pow(2, 0)      = %.15f\n", m_pow(2, 0));
+    printf("pow(2, 1)      = %.15f\n", m_pow(2, 1));
+    printf("pow(2, 10)     = %.15f\n", m_pow(2, 10));
+
+    printf("pow(3, 2)      = %.15f\n", m_pow(3, 2));
+    printf("pow(5, 3)      = %.15f\n", m_pow(5, 3));
+
+
+    printf("pow(2, -1)     = %.15f\n", m_pow(2, -1));
+    printf("pow(2, -3)     = %.15f\n", m_pow(2, -3));
+
+    printf("pow(0.5, 2)    = %.15f\n", m_pow(0.5, 2));
+}
+
 void module_test(){
     printf("\n=== MODULO ===\n");
 

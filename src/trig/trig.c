@@ -59,26 +59,50 @@ double m_pow(double x, int n){
 }
 
 double m_ln(double x){
-
-    if(x <= 0.0){
+    if (x <= 0){
         return M_NAN;
     }
 
-    double t = x - 1;
-   
-    double term = t;
-    double ln_value = term;
-
-    for (int n = 1; n < ITERATIONS; n++){
-        term *= -t * n / (n + 1.0);
-        ln_value += term;
-
-        if(m_abs(term) < PRECISION){
-            break;
-        }
+    if(x == 1){
+        return 0;
     }
 
-    return ln_value;
+    double k = 0.0;
+    double m = x;
+
+    while (m >= 2)
+    {
+        m = m / 2;
+        k = k + 1;
+    }
+    
+    while (m < 1)
+    {
+        m = m * 2;
+        k = k - 1;
+    }
+    
+    double ln = m_ln_series(m);
+
+    return ln + k * M_LN2;
+}
+
+double m_ln_series(double m){
+    double y = (m - 1) / (m + 1);
+    double y2 = y * y;
+    double term = y;
+    double sum = 0.0;
+    
+    int n = 1;
+
+    while (m_abs(term) > PRECISION)
+    {
+        sum = sum + term / n;
+        term = term * y2;
+        n = n + 2;
+    }
+    
+    return 2 * sum;
 }
 
 double m_mod(double a, double b){
@@ -179,11 +203,11 @@ double m_cot(double rad){
 }
 
 double m_sinh(double x){
-    return (m_pow(e, x) - m_pow(e, -x)) / 2;
+    return (m_pow(M_e, x) - m_pow(M_e, -x)) / 2;
 }
 
 double m_cosh(double x){
-    return (m_pow(e, x) + m_pow(e, -x)) / 2;
+    return (m_pow(M_e, x) + m_pow(M_e, -x)) / 2;
 }
 
 double m_tanh(double x){
