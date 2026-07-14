@@ -36,26 +36,21 @@ double m_sqrt(double x){
     return current_x;
 }
 
-double m_pow(double x, int n){
-    if(n == 0.0 && x == 0.0){
-        return M_NAN;
+double m_exp(double x){
+    double term = 1.0;
+    double sum  = 1.0;
+
+    for (int i = 1; i < 100; i++)
+    {
+        term *= x / i;
+        sum += term;
+
+        if(m_abs(term) < PRECISION){
+            break;
+        }
     }
 
-    if(n == 0.0){
-        return 1.0;
-    }
-
-    if(x == 0.0){
-        return 0.0;
-    }
-
-    double result = 1.0;
-
-    for (int i = 0; i < (int)m_abs(n); i++){
-        result *= x;
-    }
-    
-    return (n < 0.0) ? (1.0 / result) : result;
+    return sum;
 }
 
 double m_ln(double x){
@@ -203,15 +198,27 @@ double m_cot(double rad){
 }
 
 double m_sinh(double x){
-    return (m_pow(M_e, x) - m_pow(M_e, -x)) / 2;
+    return (m_exp(x) - m_exp(-x)) / 2;
 }
 
 double m_cosh(double x){
-    return (m_pow(M_e, x) + m_pow(M_e, -x)) / 2;
+    return (m_exp(x) + m_exp(-x)) / 2;
 }
 
 double m_tanh(double x){
     return m_sinh(x) / m_cosh(x);
+}
+
+double m_sech(double x){
+    return 1 / m_cosh(x);
+}
+
+double m_csch(double x){
+    return 1 / m_sinh(x);
+}
+
+double m_coth(double x){
+    return 1 / m_tanh(x);
 }
 
 double m_arctan(double x){
@@ -293,4 +300,28 @@ double m_arccot(double x){
     }
     
     return PI / 2;
+}
+
+double m_arcsinh(double x){
+    return m_ln(x + m_sqrt((x * x) + 1));
+}
+
+double m_arccosh(double x){
+    return m_ln(x + m_sqrt((x * x) - 1));
+}
+
+double m_arctanh(double x){
+    return 0.5 * m_ln((1 + x) / (1 - x));
+}
+
+double m_arcsech(double x){
+    return m_arccosh(1 / x);
+}
+
+double m_arccsch(double x){
+    return m_arcsinh(1 / x);
+}
+
+double m_arccoth(double x){
+    return 0.5 * m_ln((x + 1) / (x - 1));
 }

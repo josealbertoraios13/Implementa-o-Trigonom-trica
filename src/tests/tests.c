@@ -76,21 +76,17 @@ void ln_test(){
     printf("ln(1024)  = %.15f\n", m_ln(1024));
 }
 
-void pow_test(){
+void exp_test(){
     printf("\n=== POWER ===\n");
 
-    printf("pow(2, 0)      = %.15f\n", m_pow(2, 0));
-    printf("pow(2, 1)      = %.15f\n", m_pow(2, 1));
-    printf("pow(2, 10)     = %.15f\n", m_pow(2, 10));
+    printf("exp(2)     = %.15f\n", m_exp(2));
+    printf("exp(3)      = %.15f\n", m_exp(3));
+    printf("exp(5)      = %.15f\n", m_exp(5));
 
-    printf("pow(3, 2)      = %.15f\n", m_pow(3, 2));
-    printf("pow(5, 3)      = %.15f\n", m_pow(5, 3));
+    printf("exp(2)     = %.15f\n", m_exp(2));
+    printf("exp(2)     = %.15f\n", m_exp(2));
 
-
-    printf("pow(2, -1)     = %.15f\n", m_pow(2, -1));
-    printf("pow(2, -3)     = %.15f\n", m_pow(2, -3));
-
-    printf("pow(0.5, 2)    = %.15f\n", m_pow(0.5, 2));
+    printf("exp(0.5)    = %.15f\n", m_exp(0.5));
 }
 
 void module_test(){
@@ -155,13 +151,57 @@ void trigonometric_functions_test2(){
 }
 
 void trigonometric_functions_test3(){
+    printf("\n=== HIPERBOLICAL TRIGONOMETRIC FUNCTIONS ===\n");
+
+    printf("\n[SENO HIPERBÓLICA]\n");
+    printf("sinh(0)      = %.10f\n", m_sinh(RAD_0));
+    printf("sinh(PI/6)   = %.10f\n", m_sinh(RAD_30));
+    printf("sinh(PI/4)   = %.10f\n", m_sinh(RAD_45));
+    printf("sinh(PI/3)   = %.10f\n", m_sinh(RAD_60));
+
+    printf("\n[COSSENO HIPERBÓLICA]\n");
+    printf("cosh(PI/6)   = %.10f\n", m_cosh(RAD_30));
+    printf("cosh(PI/4)   = %.10f\n", m_cosh(RAD_45));
+    printf("cosh(PI/3)   = %.10f\n", m_cosh(RAD_60));
+    printf("cosh(PI/2)   = %.10f\n", m_cosh(RAD_90));
+
+    printf("\n[TANGENTE HIPERBÓLICA]\n");
+    printf("tanh(PI/6)   = %.10f\n", m_tanh(RAD_30));
+    printf("tanh(PI/4)   = %.10f\n", m_tanh(RAD_45));
+    printf("tanh(PI/3)   = %.10f\n", m_tanh(RAD_60));
+}
+
+void trigonometric_functions_test4(){
+    printf("\n=== RECIPROCAL HYPERBOLIC FUNCTIONS ===\n");
+
+    printf("\n[SECANTE HIPERBÓLICA]\n");
+    printf("sech(0)      = %.10f\n", m_sech(RAD_0));
+    printf("sech(PI/6)   = %.10f\n", m_sech(RAD_30));
+    printf("sech(PI/4)   = %.10f\n", m_sech(RAD_45));
+    printf("sech(PI/3)   = %.10f\n", m_sech(RAD_60));
+    printf("sech(PI/2)   = %.10f\n", m_sech(RAD_90));
+
+    printf("\n[COSSECANTE HIPERBÓLICA]\n");
+    printf("csch(PI/6)   = %.10f\n", m_csch(RAD_30));
+    printf("csch(PI/4)   = %.10f\n", m_csch(RAD_45));
+    printf("csch(PI/3)   = %.10f\n", m_csch(RAD_60));
+    printf("csch(PI/2)   = %.10f\n", m_csch(RAD_90));
+
+    printf("\n[COTANGENTE HIPERBÓLICA]\n");
+    printf("coth(PI/6)   = %.10f\n", m_coth(RAD_30));
+    printf("coth(PI/4)   = %.10f\n", m_coth(RAD_45));
+    printf("coth(PI/3)   = %.10f\n", m_coth(RAD_60));
+    printf("coth(PI/2)   = %.10f\n", m_coth(RAD_90));
+}
+
+void trigonometric_functions_test5(){
     printf("\n=== INVERSE TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[ARCOSIN]\n");
-    printf("arcosin(0)      = %.10f\n", m_arcsin(RAD_0));
-    printf("arcosin(PI/6)   = %.10f\n", m_arcsin(RAD_30));
-    printf("arcosin(PI/4)   = %.10f\n", m_arcsin(RAD_45));
-    printf("arcosin(PI/3)   = %.10f\n", m_arcsin(RAD_60));
+    printf("arcsin(0)      = %.10f\n", m_arcsin(RAD_0));
+    printf("arcsin(PI/6)   = %.10f\n", m_arcsin(RAD_30));
+    printf("arcsin(PI/4)   = %.10f\n", m_arcsin(RAD_45));
+    printf("arcsin(PI/3)   = %.10f\n", m_arcsin(RAD_60));
 
     printf("\n[ARCCOS]\n");
     printf("arccos(PI/6)   = %.10f\n", m_arccos(RAD_30));
@@ -175,7 +215,7 @@ void trigonometric_functions_test3(){
     printf("arctan(PI/3)   = %.10f\n", m_arctan(RAD_60));
 }
 
-void trigonometric_functions_test4(){
+void trigonometric_functions_test6(){
     printf("\n=== INVERSE RECIPROCAL TRIGONOMETRIC FUNCTIONS ===\n");
     
     printf("\n[ARCCOT]\n");
@@ -192,4 +232,47 @@ void trigonometric_functions_test4(){
     printf("arccsc(1)     = %.10f\n", m_arccsc(1));
     printf("arccsc(2)     = %.10f\n", m_arccsc(2));
     printf("arccsc(-2)    = %.10f\n", m_arccsc(-2));
+}
+
+void trigonometric_functions_test7(){
+    printf("\n=== INVERSE HYPERBOLIC FUNCTIONS ===\n");
+
+    printf("\n[ARCO SENO HIPERBÓLICO]\n");
+    printf("arcsinh(0)      = %.10f\n", m_arcsinh(0.0));
+    printf("arcsinh(0.5)    = %.10f\n", m_arcsinh(0.5));
+    printf("arcsinh(1)      = %.10f\n", m_arcsinh(1.0));
+    printf("arcsinh(2)      = %.10f\n", m_arcsinh(2.0));
+
+    printf("\n[ARCO COSSENO HIPERBÓLICO]\n");
+    printf("arccosh(1)      = %.10f\n", m_arccosh(1.0));
+    printf("arccosh(2)      = %.10f\n", m_arccosh(2.0));
+    printf("arccosh(5)      = %.10f\n", m_arccosh(5.0));
+    printf("arccosh(10)     = %.10f\n", m_arccosh(10.0));
+
+    printf("\n[ARCO TANGENTE HIPERBÓLICA]\n");
+    printf("arctanh(-0.5)   = %.10f\n", m_arctanh(-0.5));
+    printf("arctanh(0)      = %.10f\n", m_arctanh(0.0));
+    printf("arctanh(0.5)    = %.10f\n", m_arctanh(0.5));
+    printf("arctanh(0.9)    = %.10f\n", m_arctanh(0.9));
+}
+
+void trigonometric_functions_test8(){
+    printf("\n=== RECIPROCAL INVERSE HYPERBOLIC FUNCTIONS ===\n");
+
+    printf("\n[ARCO SECANTE HIPERBÓLICA]\n");
+    printf("arcsech(1)      = %.10f\n", m_arcsech(1.0));
+    printf("arcsech(0.5)    = %.10f\n", m_arcsech(0.5));
+    printf("arcsech(0.25)   = %.10f\n", m_arcsech(0.25));
+
+    printf("\n[ARCO COSSECANTE HIPERBÓLICA]\n");
+    printf("arccsch(-2)     = %.10f\n", m_arccsch(-2.0));
+    printf("arccsch(-1)     = %.10f\n", m_arccsch(-1.0));
+    printf("arccsch(1)      = %.10f\n", m_arccsch(1.0));
+    printf("arccsch(2)      = %.10f\n", m_arccsch(2.0));
+
+    printf("\n[ARCO COTANGENTE HIPERBÓLICA]\n");
+    printf("arccoth(-2)    = %.10f\n", m_arccoth(-2.0));
+    printf("arccoth(-1.5)  = %.10f\n", m_arccoth(-1.5));
+    printf("arccoth(1.5)   = %.10f\n", m_arccoth(1.5));
+    printf("arccoth(2)     = %.10f\n", m_arccoth(2.0));
 }

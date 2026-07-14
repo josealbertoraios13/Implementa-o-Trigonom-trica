@@ -39,7 +39,7 @@ double m_abs(double x);
 
 double m_sqrt(double x);
 
-double m_pow(double x, int n);
+double m_exp(double x);
 
 double m_ln(double x);
 double m_ln_series(double m);
@@ -58,6 +58,10 @@ double m_sinh(double x);
 double m_cosh(double x);
 double m_tanh(double x);
 
+double m_sech(double x);
+double m_csch(double x);
+double m_coth(double x);
+
 double m_arcsin(double x);
 double m_arccos(double x);
 double m_arctan(double x);
@@ -65,5 +69,13 @@ double m_arctan(double x);
 double m_arcsec(double x);
 double m_arccsc(double x);
 double m_arccot(double x);
+
+double m_arcsinh(double x);
+double m_arccosh(double x);
+double m_arctanh(double x);
+
+double m_arcsech(double x);
+double m_arccsch(double x);
+double m_arccoth(double x);
 
 #endif
