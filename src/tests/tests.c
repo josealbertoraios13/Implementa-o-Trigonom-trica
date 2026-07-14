@@ -2,7 +2,8 @@
 #include "trig.h"
 #include "tests.h"
 
-void rad_and_deg_convertion_test(){
+void rad_and_deg_convertion_test()
+{
 
     printf("\n=== DEGREES TO RADIANS ===\n");
     printf("0°   = %.10f rad\n", m_deg_to_rad(DEG_0));
@@ -23,7 +24,8 @@ void rad_and_deg_convertion_test(){
     printf("2*PI   = %.10f°\n", m_rad_to_deg(RAD_360));
 }
 
-void absolute_value_test(){
+void absolute_value_test()
+{
     printf("\n=== ABSOLUTE VALUE ===\n");
 
     printf("abs(0)        = %.10f\n", m_abs(0));
@@ -42,10 +44,11 @@ void absolute_value_test(){
     const double x = -42.75;
 
     printf("abs(x) == abs(-x): %s\n",
-    m_abs(x) == m_abs(-x) ? "true" : "false");
+           m_abs(x) == m_abs(-x) ? "true" : "false");
 }
 
-void sqrt_test(){
+void sqrt_test()
+{
     printf("\n=== SQUARE ROOT ===\n");
 
     printf("sqrt(0)  = %.10f\n", m_sqrt(0));
@@ -60,7 +63,8 @@ void sqrt_test(){
     printf("sqrt(81) = %.10f\n", m_sqrt(81));
 }
 
-void ln_test(){
+void ln_test()
+{
     printf("\n=== NATURAL LOGARITHM ===\n");
 
     printf("ln(1)     = %.15f\n", m_ln(1));
@@ -76,7 +80,8 @@ void ln_test(){
     printf("ln(1024)  = %.15f\n", m_ln(1024));
 }
 
-void exp_test(){
+void exp_test()
+{
     printf("\n=== POWER ===\n");
 
     printf("exp(2)     = %.15f\n", m_exp(2));
@@ -89,7 +94,8 @@ void exp_test(){
     printf("exp(0.5)    = %.15f\n", m_exp(0.5));
 }
 
-void module_test(){
+void module_test()
+{
     printf("\n=== MODULO ===\n");
 
     printf("mod(10, 3)      = %.10f\n", m_mod(10, 3));
@@ -105,7 +111,8 @@ void module_test(){
     printf("mod(2*PI, PI)   = %.10f\n", m_mod(2 * PI, PI));
 }
 
-void trigonometric_functions_test1(){
+void trigonometric_functions_test1()
+{
     printf("\n=== FUNDAMENTAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SENO]\n");
@@ -129,7 +136,8 @@ void trigonometric_functions_test1(){
     printf("tan(PI/3)   = %.10f\n", m_tan(RAD_60));
 }
 
-void trigonometric_functions_test2(){
+void trigonometric_functions_test2()
+{
     printf("\n=== RECIPROCAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SECANTE]\n");
@@ -150,7 +158,8 @@ void trigonometric_functions_test2(){
     printf("cot(PI/3)   = %.10f\n", m_cot(RAD_60));
 }
 
-void trigonometric_functions_test3(){
+void trigonometric_functions_test3()
+{
     printf("\n=== HIPERBOLICAL TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[SENO HIPERBÓLICA]\n");
@@ -171,7 +180,8 @@ void trigonometric_functions_test3(){
     printf("tanh(PI/3)   = %.10f\n", m_tanh(RAD_60));
 }
 
-void trigonometric_functions_test4(){
+void trigonometric_functions_test4()
+{
     printf("\n=== RECIPROCAL HYPERBOLIC FUNCTIONS ===\n");
 
     printf("\n[SECANTE HIPERBÓLICA]\n");
@@ -194,7 +204,8 @@ void trigonometric_functions_test4(){
     printf("coth(PI/2)   = %.10f\n", m_coth(RAD_90));
 }
 
-void trigonometric_functions_test5(){
+void trigonometric_functions_test5()
+{
     printf("\n=== INVERSE TRIGONOMETRIC FUNCTIONS ===\n");
 
     printf("\n[ARCOSIN]\n");
@@ -215,9 +226,10 @@ void trigonometric_functions_test5(){
     printf("arctan(PI/3)   = %.10f\n", m_arctan(RAD_60));
 }
 
-void trigonometric_functions_test6(){
+void trigonometric_functions_test6()
+{
     printf("\n=== INVERSE RECIPROCAL TRIGONOMETRIC FUNCTIONS ===\n");
-    
+
     printf("\n[ARCCOT]\n");
     printf("arccot(1)     = %.10f\n", m_arccot(1));
     printf("arccot(0)     = %.10f\n", m_arccot(0));
@@ -234,7 +246,8 @@ void trigonometric_functions_test6(){
     printf("arccsc(-2)    = %.10f\n", m_arccsc(-2));
 }
 
-void trigonometric_functions_test7(){
+void trigonometric_functions_test7()
+{
     printf("\n=== INVERSE HYPERBOLIC FUNCTIONS ===\n");
 
     printf("\n[ARCO SENO HIPERBÓLICO]\n");
@@ -256,7 +269,8 @@ void trigonometric_functions_test7(){
     printf("arctanh(0.9)    = %.10f\n", m_arctanh(0.9));
 }
 
-void trigonometric_functions_test8(){
+void trigonometric_functions_test8()
+{
     printf("\n=== RECIPROCAL INVERSE HYPERBOLIC FUNCTIONS ===\n");
 
     printf("\n[ARCO SECANTE HIPERBÓLICA]\n");
