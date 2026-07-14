@@ -6,7 +6,7 @@ Biblioteca em C para funções matemáticas e trigonométricas implementadas man
 
 O projeto compila um executável único `my_math` que roda uma bateria de testes e exemplos de funções matemáticas implementadas em `src/trig/trig.c`.
 
-A implementação evita o uso direto das funções trigonométricas e logarítmicas da biblioteca padrão, exceto para manter constantes e compatibilidade de linking via `-lm`.
+A implementação evita o uso direto das funções trigonométricas e logarítmicas da biblioteca padrão.
 
 ## Recursos Implementados
 
